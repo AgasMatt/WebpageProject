@@ -57,12 +57,14 @@
 		width: 15vw;
 		height: 5vh;
 		margin-bottom: 2vh;
+		background: whitesmoke;
 	}
 	
 	.btn3{
 		width: 15vw;
 		height: 5vh;
 		margin-bottom: 2vh;
+		
 	}
 	
 	.btn4{
@@ -83,15 +85,15 @@
 			</a>
 			
 			<a href="viewrecord.php">
-				<button class="btn2">VIEW RECORD</button> <br>
+				<button class="btn2">PROFILE</button> <br>
 			</a>
 			
 			<a href="viewrecord.php">
-				<button class="btn3">VIEW RECORD</button> <br>
+				<button class="btn3">VIEW BY FIELDS</button> <br>
 			</a>
 			
 			<a href="viewrecord.php">
-				<button class="btn4">VIEW RECORD</button>
+				<button class="btn4">LEAVE RECORDS</button>
 			</a>
 		</div>
 	<span  href="javascript:void(0);" class="icon" onclick="myFunction()">
