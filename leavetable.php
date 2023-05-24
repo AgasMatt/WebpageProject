@@ -6,15 +6,18 @@
 <style>
 	body{
 		
-		margin-top: 25vh;
 	}
 	table, th, tr{
-		border: 3px solid black;
 		border-collapse: collapse;
 		height: 4vh;
 		width: 90vw;
-		background: #daeaf6;
+		background:#00a877;
 		margin: 2vh;
+		color:white;
+		text-align: center;
+		font-family: 
+	        border: none;
+		border-radius: 15px 15px;
 	}
    h1{
 		margin-bottom: 20vh;
