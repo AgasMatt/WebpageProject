@@ -16,13 +16,14 @@
 		background: #daeaf6;
 		margin: 2vh;
 	}
-    td{
-		border: 2px solid black;
+   h1{
+		margin-bottom: 20vh;
+		background: #00A877;
 	}
 </style>
 <body>
 <center>
-	
+	<h1>SAN PEDRO RELOCATION CENTER NATIONAL HIGH SCHOOL - MAIN</h1>	
 <table>
 	<tr>
 		<th>NAME</th>
