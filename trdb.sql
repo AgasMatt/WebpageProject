@@ -77,6 +77,26 @@ CREATE TABLE IF NOT EXISTS `trtable` (
   `Age` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`TIN`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `accounts`
+--
+
+DROP TABLE IF EXISTS `accounts`;
+CREATE TABLE IF NOT EXISTS `accounts` (
+  `ID` int(100) NOT NULL,
+  `Username` varchar(100) DEFAULT NULL,
+  `EmailAdd` varchar(100) DEFAULT NULL,
+  `BirthDate` varchar(100) DEFAULT NULL,
+  `Password` varchar(100) DEFAULT NULL,
+  `SecQuest1` varchar(100) DEFAULT NULL,
+  `SecQuest2` varchar(100) DEFAULT NULL,
+  `SecAns1` varchar(100) DEFAULT NULL,
+  `SecAns2` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
