@@ -30,6 +30,8 @@
 				<option value="10-Day VAWC Leave">10-Days VAWC Leave</option>
 				<option value="Rehabilitation Leave">Rehabilitation Leave</option>
 				<option value="Special Leave Benefits for Women">Special Leave Benefits for Women</option>
+				<option value="Special Emergency (Calamity) Leave">Special Emergency (Calamity) Leave</option>
+				<option value="Adoption Leave">Adoption Leave</option>
 			</select>
 			
 			<label><input type="text" name="remarks" placeholder="REMARKS" required></label>
