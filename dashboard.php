@@ -43,11 +43,12 @@
 		color: black;
 		margin-top: auto;
 		border-radius: 1vh;
+
 	}
 	
 	.btn{
 		width: 15vw;
-		height: 10vh;
+		height: 5vh;
 		margin-bottom: 2vh;
 		margin-left: 5vw;
 		background: whitesmoke;
@@ -57,6 +58,7 @@
 		width: 15vw;
 		height: 5vh;
 		margin-bottom: 2vh;
+		margin-left: 5vw;
 		background: whitesmoke;
 	}
 	
@@ -64,13 +66,16 @@
 		width: 15vw;
 		height: 5vh;
 		margin-bottom: 2vh;
-		
+		margin-left: 5vw;
+		background: whitesmoke;
 	}
 	
 	.btn4{
 		width: 15vw;
 		height: 5vh;
 		margin-bottom: 2vh;
+		margin-left: 5vw;
+		background: whitesmoke;
 	}
 </style>
 <body>
@@ -80,29 +85,34 @@
 		<h1>DASHBOARD</h1>
 		
 		<div id="myLinks">
-			<a href="viewrecord.php">
+			<a href="teachertable.php">
 				<button class="btn">VIEW RECORD</button> <br>
 			</a>
 			
-			<a href="viewrecord.php">
+			<a href="leavetable.php">
 				<button class="btn2">PROFILE</button> <br>
 			</a>
 			
-			<a href="viewrecord.php">
-				<button class="btn3">VIEW BY FIELDS</button> <br>
+			<a href="profile.php">
+				<button class="btn3">VIEW RECORD</button> <br>
 			</a>
 			
-			<a href="viewrecord.php">
-				<button class="btn4">LEAVE RECORDS</button>
+			<!--
+			<a href="javascript:void(0);" onclick="logged_in()">
+				<button class="btn4">VIEW RECORD</button>
 			</a>
+			-->
 		</div>
-	<span  href="javascript:void(0);" class="icon" onclick="myFunction()">
+	<span  href="javascript:void(0);" class="icon" onclick="links()">
 		<i class="fa fa-bars"></i>&#9776;
 	</span>
 	</div>
 </div>
 <script>
-function myFunction(){
+/*function logged_in() {
+	var check = document.getElementById("");
+}*/
+function links(){
 	var x = document.getElementById("myLinks");
 	if (x.style.display === "block"){
 		x.style.display = "none";

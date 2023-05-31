@@ -8,7 +8,7 @@
 		border-collapse: collapse;
 		height: 4vh;
 		width: 90vw;
-		background: #00A877;
+		
 		margin: 2vh;
 		color: white;
 		text-align: center;
@@ -16,7 +16,9 @@
 		border: none;
 		border-radius: 15px 15px;
 	}
-  
+    th{
+		background: #00A877;
+	}
 	h1{
 		margin-bottom: 20vh;
 	
