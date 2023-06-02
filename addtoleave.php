@@ -3,9 +3,24 @@
 	<head>
 		<title>Untitled</title>
 	</head>
-	
+	<style>
+		body{
+			background-color: #00A877;
+		}
+		fieldset{
+			width:35vw;
+			height: 35vh;
+			left: 32vw;
+			top: 20vh;
+			position: absolute;
+			border: none;
+	        background-color: WHITE;
+			border-radius: 25px;
+		}
+	</style>
 	<body>
 		<form action="" method="post">
+			<fieldset>
 			<center>
 				<div class="body">
 					<h1>Something</h1>
@@ -52,6 +67,7 @@
 				echo "Success.";
 			}
 			?>
+				<fieldset>
 		</form>
 		<a href="leavetable.php">VIEW</a>
 	</body>
