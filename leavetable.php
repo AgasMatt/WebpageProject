@@ -5,36 +5,62 @@
 </head>
 <style>
 	body{
-
+		background-repeat: no-repeat;
+		background-size: cover;
+		
 			}
 	table, th, tr{
 		border-collapse: collapse;
 		height: 4vh;
 		width: 90vw;
 		background: #00A877;
-		margin: 2vh;
+		margin-left: 2vh;
+		margin-top: 20vh;
 		color: white;
 		text-align: center;
 		font-family:calibri;
 		border: none;
 		border-radius: 15px 15px;
 		font-size: 2vh;
-		
+      
 	}
   
 	h1{
-		margin-bottom: 20vh;
+		top: 1vh;
 	
 		background: #00A877;
 	}
-	
+	img{
+		width: 229px;
+		height: 216px;
+	}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 60px;
+}
+
+li a {
+  display: block;
+}
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
 </style>
 <body>
+<ul>
+  <li><a href="default.asp">Home</a></li>
+  <li><a href="news.asp">News</a></li>
+  <li><a href="contact.asp">Contact</a></li>
+  <li><a href="about.asp">About</a></li>
+</ul>
+	
 <center>
-<h1>SAN PEDRO RELOCATION CENTER NATIONAL HIGH SCHOOL - MAIN</h1>	
+<img src="img/LOGO.png">
 <table>
 	<tr>
-		
 		<th>NAME</th>
 		<th>START DATE</th>
 		<th>END DATE</th>
@@ -45,9 +71,9 @@
 	</tr>
 <?php
 include ("connection.php");
-if (isset ($_GET['id'])){
-	$id = $_GET['id'];
-	mysqli_query($connection, "DELETE FROM leavetable where id=".$id.";");
+if (isset ($GET ['name'])){
+	$id = $_GET['name'];
+	$delete = mysqli_query($connection, "DELETE FROM leavetable where name = '$name");
 }
 $result = mysqli_query($connection, "select * from leavetable");
 
@@ -67,6 +93,6 @@ if (mysqli_num_rows($result) >0){
 ?>
 </table>
 </center>
-<a href="addtoleave.php">VIEW</a>
+<?php echo "<a href=\"addtoleave.php?account=".$_GET["account"]."\">VIEW</a>" ?>
 </body>
 </html>

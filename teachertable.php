@@ -1,25 +1,28 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-	<title>Untitled</title>
+	<title>teacher table</title>
 </head>
 <style>
 	body{
+		background-image: url(img/bg.jpeg);
+		background-repeat: no-repeat;
+		background-size: cover;
 		
-		margin-top: 25vh;
-	}
+			}
 	table, th, tr{
-		border: 3px solid black;
 		border-collapse: collapse;
 		height: 4vh;
-		width: 95vw;
+		width: 90vw;
 		background: #00A877;
 		margin: 2vh;
 		color: white;
+		text-align: center;
+		font-family:calibri;
+		border: none;
+		border-radius: 15px 15px;
+		font-size: 2vh;
 		
-	}
-    td{
-		border: 2px solid black;
 	}
 </style>
 <body>
@@ -72,6 +75,6 @@ if (mysqli_num_rows($result) >0){
 ?>
 </table>
 </center>
-<a href="addtotrtable.php">VIEW</a>
+<?php echo "<a href=\"addtotrtable.php?account=".$_GET["account"]."\">VIEW</a>" ?>
 </body>
 </html>

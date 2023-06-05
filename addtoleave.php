@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 	<head>
-		<title>Untitled</title>
+		<title>addtoleave</title>
 	</head>
 	<style>
 		body{
@@ -22,10 +22,8 @@
 		<form action="" method="post">
 			<fieldset>
 			<center>
-				<div class="body">
-					<h1>Something</h1>
-					
-					<label><input type="text" name="name" placeholder="NAME" required></label>
+				
+							<label><input type="text" name="name" placeholder="NAME" required></label>
 					
 					<label><input type="date" name="startdate" placeholder="START DATE" required></label>
 					
@@ -67,8 +65,8 @@
 				echo "Success.";
 			}
 			?>
-				<fieldset>
+			</fieldset>
 		</form>
-		<a href="leavetable.php">VIEW</a>
+		<?php echo "<a href=\"leavetable.php?account=".$_GET["account"]."\">VIEW</a>" ?>
 	</body>
 </html>

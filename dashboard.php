@@ -78,6 +78,7 @@
 		background: whitesmoke;
 	}
 </style>
+<title>SPRCNHS - Main</title>
 <body>
 
 <div class="container">
@@ -85,23 +86,20 @@
 		<h1>DASHBOARD</h1>
 		
 		<div id="myLinks">
-			<a href="teachertable.php">
-				<button class="btn">VIEW RECORD</button> <br>
-			</a>
-			
-			<a href="leavetable.php">
-				<button class="btn2">PROFILE</button> <br>
-			</a>
-			
-			<a href="profile.php">
-				<button class="btn3">VIEW RECORD</button> <br>
-			</a>
-			
-			<!--
-			<a href="javascript:void(0);" onclick="logged_in()">
-				<button class="btn4">VIEW RECORD</button>
-			</a>
-			-->
+			<?php
+				if (isset($_GET["account"])) {
+					echo "<a href=\"teachertable.php?account=".$_GET["account"]."\"><button class=\"btn\">VIEW RECORD</button> <br></a><a href=\"leavetable.php?account=".$_GET["account"]."\"><button class=\"btn2\">PROFILE</button> <br></a><a href=\"profile.php?account=".$_GET["account"]."\"><button class=\"btn3\">VIEW RECORD</button> <br></a>";
+				}
+				else {
+					echo "You must be logged in to access these!";
+				}
+				if (isset($_GET["account"])) {
+					echo "<a href=\"logout.php\">Log Out</a>";
+				} else {
+					echo "<a href=\"login.php\">Log In</a>";
+					echo "<a href=\"signup.php\">Sign Up</a>";
+				}
+			?>
 		</div>
 	<span  href="javascript:void(0);" class="icon" onclick="links()">
 		<i class="fa fa-bars"></i>&#9776;
@@ -109,23 +107,14 @@
 	</div>
 </div>
 <script>
-/*function logged_in() {
-	var check = document.getElementById("");
-}*/
-function links(){
-	var x = document.getElementById("myLinks");
-	if (x.style.display === "block"){
-		x.style.display = "none";
-	} else {
-		x.style.display = "block";
+	function links(){
+		var x = document.getElementById("myLinks");
+		if (x.style.display === "block"){
+			x.style.display = "none";
+		} else {
+			x.style.display = "block";
+		}
 	}
-}
 </script>
-
-
-<?php
-
-?>
-
 </body>
 </html>

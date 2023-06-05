@@ -1,10 +1,11 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 	<head>
 		<title>Untitled</title>
 	</head>
 	<body>
 		<form action="" method="post">
+			<fieldset>
 			<center>
 				<div class="body">
 					<h1>Something</h1>
@@ -64,7 +65,8 @@
 					echo "Success.";
 				}
 			?>
+			</fieldset>
 		</form>
-		<a href="teachertable.php">VIEW</a>
+		<?php echo "<a href=\"teachertable.php?account=".$_GET["account"]."\">VIEW</a>" ?>
 	</body>
 </html>

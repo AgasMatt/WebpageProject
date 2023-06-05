@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 29, 2023 at 02:44 AM
+-- Generation Time: Jun 05, 2023 at 03:02 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -32,12 +32,19 @@ DROP TABLE IF EXISTS `admintble`;
 CREATE TABLE IF NOT EXISTS `admintble` (
   `Name` varchar(100) NOT NULL,
   `Email` varchar(100) DEFAULT NULL,
-  `Username` varchar(100) DEFAULT NULL,
+  `Username` varchar(100) NOT NULL,
   `Password` varchar(100) DEFAULT NULL,
   `SecurityQ` varchar(100) DEFAULT NULL,
   `Answer` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`Name`)
+  PRIMARY KEY (`Username`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admintble`
+--
+
+INSERT INTO `admintble` (`Name`, `Email`, `Username`, `Password`, `SecurityQ`, `Answer`) VALUES
+('hrfgbsggs', 'foejfo@fofeef.com', 'WeltjeroBouite', 'grsgsgbdghge', 'What is the color of my rock?', 'lightgray');
 
 -- --------------------------------------------------------
 
@@ -47,29 +54,26 @@ CREATE TABLE IF NOT EXISTS `admintble` (
 
 DROP TABLE IF EXISTS `leavetable`;
 CREATE TABLE IF NOT EXISTS `leavetable` (
+  `ID` int(100) NOT NULL AUTO_INCREMENT,
   `Name` varchar(100) NOT NULL,
   `StartDate` date DEFAULT NULL,
   `EndDate` date DEFAULT NULL,
   `Numdays` int(100) DEFAULT NULL,
   `Leavetype` varchar(100) DEFAULT NULL,
-  `Remarks` varchar(100) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `Remarks` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `leavetable`
 --
 
-INSERT INTO `leavetable` (`Name`, `StartDate`, `EndDate`, `Numdays`, `Leavetype`, `Remarks`) VALUES
-('Majeco, Gemmalyn V.', '2023-05-22', '2023-05-22', 1, 'Maternity leave', 'with RTS'),
-('ewsa', '2023-05-31', '2023-05-31', 1, 'Sick Leave', 'with RTS'),
-('Majeco, Gemmalyn V.', '2023-05-30', '2023-05-30', 1, 'Sick Leave', 'with RTS'),
-('fshgwrgwsg', '2023-05-29', '2023-05-31', 3, 'Solo Parent Leave', 'gfeggwegfws'),
-('aika', '2023-05-02', '2023-05-29', 1, 'Maternity Leave', 'asdasd'),
-('FSFSDSAFSFSF', '2023-05-02', '2023-05-06', 4, 'Sick Leave', 'with RTS'),
-('fshgwrgwsg', '2023-05-29', '2023-05-31', 3, 'Solo Parent Leave', 'gfeggwegfws'),
-('fshgwrgwsg', '2023-05-29', '2023-05-31', 3, 'Solo Parent Leave', 'gfeggwegfws'),
-('assasaSAS', '2023-05-02', '2023-05-03', 1, 'Paternity Leave', 'with RTS'),
-('fshgwrgwsg', '2023-05-29', '2023-05-31', 3, 'Solo Parent Leave', 'gfeggwegfws');
+INSERT INTO `leavetable` (`ID`, `Name`, `StartDate`, `EndDate`, `Numdays`, `Leavetype`, `Remarks`) VALUES
+(8, 'GontiÃ±as, Liezel B.', '2021-06-06', '2021-07-05', 30, 'Sick Leave', 'with RTS'),
+(7, 'Mojeco, Gemmalyn V.', '2021-05-22', '2021-07-21', 60, 'Maternity Leave', 'with RTS'),
+(9, 'Padilla, Jonathan B.', '2021-09-13', '2021-10-05', 0, 'Sick Leave', 'Internal Arrangement'),
+(10, 'Nacionales, Sheila Mae B.', '2022-01-03', '2022-04-17', 105, 'Maternity Leave', 'Filed RTS'),
+(11, 'Ponce, Emelia A.', '2022-02-10', '2022-05-26', 105, 'Maternity Leave', 'Filed RTS');
 
 -- --------------------------------------------------------
 
@@ -79,14 +83,13 @@ INSERT INTO `leavetable` (`Name`, `StartDate`, `EndDate`, `Numdays`, `Leavetype`
 
 DROP TABLE IF EXISTS `trtable`;
 CREATE TABLE IF NOT EXISTS `trtable` (
-  `ID` int(100) NOT NULL,
   `FirstName` varchar(100) NOT NULL,
   `MiddleName` varchar(100) NOT NULL,
   `LastName` varchar(100) NOT NULL,
   `Status` varchar(100) NOT NULL,
   `BirthPlace` varchar(100) NOT NULL,
   `salary` int(100) DEFAULT NULL,
-  `Birthdate` int(100) DEFAULT NULL,
+  `Birthdate` varchar(100) DEFAULT NULL,
   `Empstat` varchar(100) DEFAULT NULL,
   `TIN` int(100) NOT NULL,
   `SG` varchar(100) DEFAULT NULL,
@@ -94,9 +97,17 @@ CREATE TABLE IF NOT EXISTS `trtable` (
   `Course` varchar(100) DEFAULT NULL,
   `PostGrad` varchar(100) DEFAULT NULL,
   `GradeLvl` varchar(100) DEFAULT NULL,
-  `Age` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`ID`)
+  `Age` int(100) DEFAULT NULL,
+  PRIMARY KEY (`TIN`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `trtable`
+--
+
+INSERT INTO `trtable` (`FirstName`, `MiddleName`, `LastName`, `Status`, `BirthPlace`, `salary`, `Birthdate`, `Empstat`, `TIN`, `SG`, `Gender`, `Course`, `PostGrad`, `GradeLvl`, `Age`) VALUES
+('ewrtfgqwekyfiwgf', 'srgewrgesgrsz', 'gwrgwrgrw', 'srgwrgwrgwsg', 'gwgwsgfswf', 5325223, '2023-05-01', 'sgsrgfvsgvsdg', 35235235, 'gdbhdbebh', 'f', 'grsgesrgghehg', 'r4grwgsgergr', 'rgrewgwrgsrg', 36),
+('aika', 'longaria', 'aniceto', 'married', 'bfigeifhnc', 12341234, '2023-05-02', 'fvac', 4, '23dewq', 'xdxw', 'dfg df', 'qcxeq', '4', 7);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
