@@ -30,35 +30,28 @@
 	
 		background: #00A877;
 	}
-	img{
-		width: 229px;
-		height: 216px;
-	}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 60px;
+li{
+  display: inline;
+	 float: left;
+}
+a{
+  display: block;
+  padding: 8px;
+  
 }
 
-li a {
-  display: block;
-}
-.active {
-  background-color: #04AA6D;
-  color: white;
-}
+
 </style>
 <body>
 <ul>
-  <li><a href="default.asp">Home</a></li>
-  <li><a href="news.asp">News</a></li>
-  <li><a href="contact.asp">Contact</a></li>
-  <li><a href="about.asp">About</a></li>
+  <li><a href="">View teachers</a></li>
+  <li><a href="">View teachers on leave</a></li>
+  <li><a href="">Profile</a></li>
+  
 </ul>
 	
 <center>
-<img src="img/LOGO.png">
+
 <table>
 	<tr>
 		<th>NAME</th>
@@ -86,7 +79,7 @@ if (mysqli_num_rows($result) >0){
 		echo "<td>". $rows[4]. "</td>";
 		echo "<td>". $rows[5]. "</td>";
 		echo "<td>". $rows[6]. "</td>";
-		echo "<td> <button class ='btn'><a href='leavetable.php? id=".$rows[0]."'>DELETE</a></button></td>";
+		echo "<td> <button class ='btn'><a href='leavetable.php?id=".$rows[0]."'>DELETE</a></button></td>";
 		echo "</tr>";
 	}
 }
