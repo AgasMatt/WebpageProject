@@ -88,26 +88,27 @@
 		<div id="myLinks">
 			<?php
 				if (isset($_GET["account"])) {
-					echo "<a href=\"teachertable.php?account=".$_GET["account"]."\"><button class=\"btn\">VIEW RECORD</button> <br></a><a href=\"leavetable.php?account=".$_GET["account"]."\"><button class=\"btn2\">PROFILE</button> <br></a><a href=\"profile.php?account=".$_GET["account"]."\"><button class=\"btn3\">VIEW RECORD</button> <br></a>";
+					echo "<a href=\"teachertable.php?account=".$_GET["account"]."\"><button class=\"btn\">VIEW TEACHERS</button> <br></a><a href=\"leavetable.php?account=".$_GET["account"]."\"><button class=\"btn2\">VIEW TEACHERS ON LEAVE</button> <br></a><a href=\"profile.php?account=".$_GET["account"]."\"><button class=\"btn3\">PROFILE</button> <br></a>";
 				}
 				else {
 					echo "You must be logged in to access these!";
 				}
 				if (isset($_GET["account"])) {
-					echo "<a href=\"logout.php\">Log Out</a>";
+					echo "<a href=\"logout.php?account=".$_GET["account"]."\">Log Out</a>";
 				} else {
 					echo "<a href=\"login.php\">Log In</a>";
 					echo "<a href=\"signup.php\">Sign Up</a>";
 				}
 			?>
 		</div>
-	<span  href="javascript:void(0);" class="icon" onclick="links()">
+	<span class="icon" onclick="showLinks()">
 		<i class="fa fa-bars"></i>&#9776;
 	</span>
 	</div>
 </div>
-<script>
-	function links(){
+</body>
+<script type="text/javascript">
+	function showLinks(){
 		var x = document.getElementById("myLinks");
 		if (x.style.display === "block"){
 			x.style.display = "none";
@@ -116,5 +117,4 @@
 		}
 	}
 </script>
-</body>
 </html>

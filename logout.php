@@ -6,19 +6,18 @@
       body{
         margin-top: 20vh;
         margin-left: 15vw;
-        
+        background-image: url("img/wave.png");
         background-repeat: no-repeat;
       }
       
       .main{
-        background: white;
+       
         border-radius: 3vh;
         height: 50vh;
         width: 70vw;
       }
       
-      .container{
-        background-image: url("img/wave.png");
+      .container{     
         margin: 0 auto;
         height: 50vh;
         width: 70vw;
@@ -48,26 +47,11 @@
             <h1>SAN PEDRO RELOCATION CENTER NATIONAL HIGH SCHOOL MAIN-CAMPUS</h1>
           </center>
           <center>
-          <h3>LOGIN</h3>
+          <h3>LOGOUT</h3>
           
-    <form id="loginform" action="login2.php" method="post">
-      <div class="input-box">
-        <input type="text" name="name" id="username" placeholder="USERNAME" required>
-        <label for="username">Username</label>
-      </div>  
-      <div class="input-box">
-        <input type="password" name="pass" id="password" placeholder="PASSWORD" required>
-        <label for="password">Password</label>
-      </div>
-      <div class="input-box">
-        <input type="password" name="confirm" id="password" placeholder="CONFIRM PASSWORD" required>
-        <label for="conf">Confirm Password</label>
-      </div>
-      </center>  
-      <center>
-        <input type="submit" class="btn">
-      </center>
-    </form>
+		<div align="center">Are you sure you want to log out?</div>
+		<?php echo "<a href=\"dashboard.php\">Yes</a>"; echo "<a href=\"dashboard.php?account=".$_GET["account"]."\">No</a>"; ?>
+		
         </div>
       </div>
     </div>

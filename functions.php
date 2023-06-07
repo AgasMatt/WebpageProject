@@ -40,6 +40,14 @@
 				}
 				return false;
 			}
+			function check_security($question, $answer) {
+				include("connection.php");
+				$result = mysqli_query($connection, "SELECT * FROM admintble WHERE SecurityQ=\"".$question."\"");
+				if ($answer == $rows[5]) {
+					return true;
+				}
+				return false;
+			}
 		?>
 	</body>
 </html>
