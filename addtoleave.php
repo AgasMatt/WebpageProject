@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 	<head>
-		<title>addtoleave</title>
+		<title>SPRCNHS - Add Teachers on Leave</title>
 	</head>
 	<style>
 		body{
@@ -23,7 +23,7 @@
 			<fieldset>
 			<center>
 				
-							<label><input type="text" name="name" placeholder="NAME" required></label>
+					<label><input type="text" name="name" placeholder="NAME" required></label>
 					
 					<label><input type="date" name="startdate" placeholder="START DATE" required></label>
 					
@@ -53,17 +53,17 @@
 				</div>
 			</center>
 			<?php
-			include ("connection.php");
-			@$name = $_POST['name'];
-			@$startdate = $_POST['startdate'];
-			@$enddate = $_POST['enddate'];
-			@$numdays = $_POST['numdays'];
-			@$leavetype = $_POST['leavetype'];
-			@$remarks = $_POST['remarks'];
-			$query = "insert into leavetable (Name, StartDate, EndDate, Numdays, Leavetype, Remarks) values ('".$name."', '".$startdate."', '".$enddate."', '".$numdays."', '".$leavetype."', '".$remarks."')";
-			if (mysqli_query($connection, $query)) {
-				echo "Success.";
-			}
+				include("connection.php");
+				@$name = $_POST['name'];
+				@$startdate = $_POST['startdate'];
+				@$enddate = $_POST['enddate'];
+				@$numdays = $_POST['numdays'];
+				@$leavetype = $_POST['leavetype'];
+				@$remarks = $_POST['remarks'];
+				$query = "insert into leavetable (Name, StartDate, EndDate, Numdays, Leavetype, Remarks) values ('".$name."', '".$startdate."', '".$enddate."', '".$numdays."', '".$leavetype."', '".$remarks."')";
+				if (mysqli_query($connection, $query)) {
+					echo "Success.";
+				}
 			?>
 			</fieldset>
 		</form>

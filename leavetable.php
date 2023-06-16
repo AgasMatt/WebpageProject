@@ -1,13 +1,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-	<title>Leave Table</title>
+	<title>SPRCNHS - Table of Teachers on Leave</title>
 </head>
 <style>
 	body{
 		background-repeat: no-repeat;
 		background-size: cover;
-		
+		background-image: url(img/bg.webp);
 			}
 	table, th, tr{
 		border-collapse: collapse;
@@ -30,25 +30,37 @@
 	
 		background: #00A877;
 	}
-li{
-  display: inline;
-	 float: left;
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
 }
-a{
-  display: block;
-  padding: 8px;
-  
+
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+		top: 0px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
 
 </style>
 <body>
-<ul>
-  <li><a href="">View teachers</a></li>
-  <li><a href="">View teachers on leave</a></li>
-  <li><a href="">Profile</a></li>
-  
-</ul>
+<div class="topnav">
+  <a href="#home">View teachers table</a>
+  <a href="#news">View</a>
+  <a href="#contact">Profile</a>
+ 
+</div>
 	
 <center>
 

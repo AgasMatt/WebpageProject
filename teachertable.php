@@ -1,13 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-	<title>teacher table</title>
+	<title>SPRCNHS - Table of Teachers</title>
 </head>
 <style>
 	body{
-		background-image: url(img/bg.jpeg);
-		background-repeat: no-repeat;
-		background-size: cover;
+		
 		
 			}
 	table, th, tr{

@@ -1,17 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-	<title></title>
+	<title>SPRCNHS - Site Guidelines</title>
 </head>
-<h1>guidelines</h1>
+<h1>Guidelines</h1>
 
-<body
-	 
-	 
-
-<?php
-
-?>
-
+<body>
+	
 </body>
 </html>

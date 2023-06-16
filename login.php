@@ -3,73 +3,165 @@
 <html>
   <head>
     <style>
-      body{
-        margin-top: 20vh;
-        margin-left: 15vw;
-        
-        background-repeat: no-repeat;
-      }
+  
+   .picture{
+
+    width: 103.5vw;
+    height: 73.2vh;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 25.7vh;
+    left: -3vw;
+    margin-top: -1vh;
+    margin-left: -1vh;
+    }
       
-      .main{
-        background: white;
-        border-radius: 3vh;
-        height: 50vh;
-        width: 70vw;
+      .up{
+        background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+         width: 100.1vw;
+        height: 25vh;
+        margin-top: -1vh;
+        margin-left: -1vh;
+        }
+        
+       
+      .logo{
+        position: absolute;
+        left: 1.1vw;
+        top:5vh;
+        height: 14vh;
+        width: 9vw;
+      
       }
+      .logo2{
+        position: absolute;
+        right: 1.3vw;
+        top:5vh;
+        height: 14vh;
+        width: 9vw;
+      }
+  
       
       .container{
-        background-image: url("img/wave.png");
-        margin: 0 auto;
-        height: 50vh;
-        width: 70vw;
+       position: absolute;
+       top: 35vh;
+       left: 33vw;
+       margin: 0 auto;
+       height: 50vh;
+        width: 30vw;
         border: none;
         border-radius: 3vh;
         box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+        background-color: white;
+        opacity: 0.5;
       }
       
       .head{
-        width: 70vw;
-        height: 6vh;
+        position: absolute;
+        left: 37vw;
+        top: 30vh;
+        width: 20vw;
+        height: 10vh;
         background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
-        transform: uppercase;
-        border-radius: 2vh;
+        color:white;      
+        border-radius: 4vh;
       }
       
-      h1{
-        padding-top: 1p,pokvh;
+     
+      
+      .username{
+        position: absolute;
+        left: 40vw;
+        top: 2vh;
+        width: 20vw;
+        height: 10vh;
+        background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+        color:white;      
+        border-radius: 4vh;
+        border: none;
+        text-align: center;
       }
-    </style>
+      
+      
+      .pass{
+        position: absolute;
+        left: 40vw;
+        top: 20vh;
+        width: 20vw;
+        height: 10vh;
+        background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+        color:white;      
+        border-radius: 4vh;
+        border: none;
+        text-align: center;
+        
+      }
+      
+      .password{
+        position: absolute;
+        left: 40vw;
+        top: 40vh;
+        width: 20vw;
+        height: 10vh;
+        background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+        color:white;      
+        border-radius: 4vh;
+        border: none;
+        text-align: center;
+        
+        
+      }
+      
+  
+      .btn {
+          background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+          color:white;
+      }
+      h1{
+      position: absolute;
+      top: -2vh;
+      left:9.5vw;
+      font-size: 75px;
+      width: 80vw;
+      text-align: center;
+       
+      }
+    
+  </style>
   </head>
   <body>
-    <div class="main">
-      <div class="container">
-        <div class="head">
-          <center>
-            <h1>SAN PEDRO RELOCATION CENTER NATIONAL HIGH SCHOOL MAIN-CAMPUS</h1>
-          </center>
-          <center>
-          <h3>LOGIN</h3>
-          
-    <form id="loginform" action="login2.php" method="post">
-      <div class="input-box">
+    <div class="up">
+      <img src="img/logo.png" class="logo">
+      <img src="img/deped.jpg" class="logo2">
+      <img src="img/bg.webp" class="picture">
+    <h1 >SAN PEDRO RELOCATION CENTER NATIONAL HIGH SCHOOL MAIN-CAMPUS</h1>
+     </div>
+    
+     
+  
+       
+           
+        <form id="loginform" action="login2.php" method="post">
+       
+   
+        <div class="username">
         <input type="text" name="name" id="username" placeholder="USERNAME" required>
-        <label for="username">Username</label>
-      </div>  
-      <div class="input-box">
-        <input type="password" name="pass" id="password" placeholder="PASSWORD" required>
-        <label for="password">Password</label>
-      </div>
-      <div class="input-box">
-        <input type="password" name="confirm" id="password" placeholder="CONFIRM PASSWORD" required>
-        <label for="conf">Confirm Password</label>
-      </div>
-      </center>  
-      <center>
-        <input type="submit" class="btn">
-      </center>
-    </form>
         </div>
-      </div>
-    </div>
+          
+        <div class="pass">
+        <input type="password" name="pass" id="password" placeholder="PASSWORD" required>
+        </div>
+     
+        <div class="password">
+        <input type="password" name="confirm" id="password" placeholder="CONFIRM PASSWORD" required>
+        </div>
+     
+    
+        <input type="submit" class="btn"  >
+   
+    </form>
+      
+ 
+   
   </body>
 </html>

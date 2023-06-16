@@ -8,19 +8,20 @@
 		<?php
 			include("functions.php");
 			include("connection.php");
-			if (@$mail = $_POST["mail"]) {
-				if (mysqli_query("INSERT INTO admintble (Name, Email, Username, Password, SecurityQ, Answer) VALUES ('".$_POST["name"]."', '".$_POST["mail"]."', '".$user."', '".$_POST["pass"]."', '".$_POST["secq"]."', '".$_POST["answer"]."');")) {
+			if (@$mail = $_POST["email"]) {
+				if (mysqli_query($connection, "INSERT INTO admintble (Name, Email, Username, Password, SecurityQ, Answer) VALUES ('".$_POST["name"]."', '".$_POST["email"]."', '".$_POST["username"]."', '".$_POST["pass"]."', '".$_POST["secq"]."', '".$_POST["answer"]."');")) {
 					echo "Success.";
+					header("Location: dashboard.php?account=".$_POST["username"]);
 				}
 			}
-			if ($answer = $_POST["ans"]) {
+			if (@$answer = $_POST["ans"]) {
 				if (check_security($_POST["secq"], $answer)) {
 					echo "Success.";
+					header("Location: dashboard.php?account=".$_GET["user"]);
 				} else {
 					header("Location: login.php");
 				}
 			}
-			echo "Location: dashboard.php?account=".$_POST["user"];
 		?>
 	</body>
 </html>

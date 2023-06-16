@@ -2,6 +2,7 @@
 
 <html>
   <head>
+    <title>SPRCNHS - Log Out</title>
     <style>
       body{
         margin-top: 20vh;

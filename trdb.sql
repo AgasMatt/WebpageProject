@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 05, 2023 at 03:02 AM
+-- Generation Time: Jun 16, 2023 at 02:49 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -44,7 +44,9 @@ CREATE TABLE IF NOT EXISTS `admintble` (
 --
 
 INSERT INTO `admintble` (`Name`, `Email`, `Username`, `Password`, `SecurityQ`, `Answer`) VALUES
-('hrfgbsggs', 'foejfo@fofeef.com', 'WeltjeroBouite', 'grsgsgbdghge', 'What is the color of my rock?', 'lightgray');
+('hrfgbsggs', 'foejfo@fofeef.com', 'WeltjeroBouite', 'grsgsgbdghge', 'What is the color of my rock?', 'lightgray'),
+('gfsgsrgsr', 'rggws@grgrsgs.frerf', 'LookAtMyEyes', 'LookAtMyEyes', 'Look at me.', 'Done.'),
+('hrhgghsrgrg', 'rtststrsrt@mjhmfh.ftgr', 'rtrstsrtsrt', '<br><br><br>', 'Food', 'Yes');
 
 -- --------------------------------------------------------
 
@@ -62,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `leavetable` (
   `Leavetype` varchar(100) DEFAULT NULL,
   `Remarks` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `leavetable`
@@ -73,7 +75,8 @@ INSERT INTO `leavetable` (`ID`, `Name`, `StartDate`, `EndDate`, `Numdays`, `Leav
 (7, 'Mojeco, Gemmalyn V.', '2021-05-22', '2021-07-21', 60, 'Maternity Leave', 'with RTS'),
 (9, 'Padilla, Jonathan B.', '2021-09-13', '2021-10-05', 0, 'Sick Leave', 'Internal Arrangement'),
 (10, 'Nacionales, Sheila Mae B.', '2022-01-03', '2022-04-17', 105, 'Maternity Leave', 'Filed RTS'),
-(11, 'Ponce, Emelia A.', '2022-02-10', '2022-05-26', 105, 'Maternity Leave', 'Filed RTS');
+(11, 'Ponce, Emelia A.', '2022-02-10', '2022-05-26', 105, 'Maternity Leave', 'Filed RTS'),
+(12, 'grstgvb', '2023-06-07', '2023-06-21', 34, 'Vacation Leave', 'gertv');
 
 -- --------------------------------------------------------
 

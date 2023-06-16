@@ -1,10 +1,10 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-	<title>Untitled</title>
+	<title>SPRCNHS - Site Accounts</title>
 </head>
 <style>
-	table, th, tr{
+	table, th, tr, td{
 		border-collapse: collapse;
 		height: 4vh;
 		width: 90vw;
@@ -17,6 +17,9 @@
 		border-radius: 15px 15px;
 	}
     th{
+		background: #00A877;
+	}
+	td{
 		background: #00A877;
 	}
 	h1{
@@ -33,7 +36,7 @@
 		<th>NAME</th>
 		<th>EMAIL</th>
 		<th>USERNAME</th>
-		<th>PASDWORD</th>
+		<th>PASSWORD</th>
 		<th>SECURITY Q</th>
 		<th>ANSWER</th>
 	</tr>
