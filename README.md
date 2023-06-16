@@ -10,9 +10,11 @@
   - Links to all other pages
 - Accounts
   - Log-in
-  - Create Account
   - Sign-up
   - Log-out
 - Database
   - Add Records
   - Update Records
+  - View Records
+- Guidelines
+- Profile
