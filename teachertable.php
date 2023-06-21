@@ -5,30 +5,66 @@
 </head>
 <style>
 	body{
-		
-		
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-image: url(img/bg.webp);
 			}
 	table, th, tr{
 		border-collapse: collapse;
 		height: 4vh;
-		width: 90vw;
+		width: 98vw;
 		background: #00A877;
-		margin: 2vh;
+		margin-left: 2vh;
+		margin-top: 20vh;
 		color: white;
 		text-align: center;
 		font-family:calibri;
 		border: none;
 		border-radius: 15px 15px;
 		font-size: 2vh;
-		
+      
 	}
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+		top: 0px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.updater {
+	font-family: calibri;
+	text-decoration: none;
+	font-weight: bold;
+	color: #2779de;
+	font-size: 3vh;
+}
 </style>
 <body>
+<div class="topnav">
+  <?php
+		echo "<a href=\"dashboard.php?account=".$_GET["account"]."\">Home</a><a href=\"leavetable.php?account=".$_GET["account"]."\">View Teachers on Leave</a><a href=\"profile.php?account=".$_GET["account"]."\">Profile</a>";
+	?>
+</div>
 <center>
 	
 <table>
 	<tr>
-		<th> FIRST NAME</th>
+		<th>FIRST NAME</th>
 		<th>MIDDLE NAME</th>
 		<th>LAST NAME</th>
 		<th>STATUS</th>
@@ -73,6 +109,24 @@ if (mysqli_num_rows($result) >0){
 ?>
 </table>
 </center>
-<?php echo "<a href=\"addtotrtable.php?account=".$_GET["account"]."\">VIEW</a>" ?>
+<?php echo "<center><a class=\"updater\" href=\"addtotrtable.php?account=".$_GET["account"]."\">ADD RECORDS</a></center>" ?>
 </body>
+<h1>You cannot access this page. Please log in.</h1>
+<!--
+<script type="javascript">
+	function showSite() {
+		const param = new URLSearchParams(window.location.search);
+		const accountName = param.get('account');
+		var x = document.getElementByTagName("body");
+		var y = document.getElementByTagName("h1");
+		if (accountName == "" || accountName == null) {
+			x.style.display = "none";
+			y.style.display = "block";
+		} else {
+			x.style.display = "block";
+			y.style.display = "none";
+		}
+	}
+</script>
+-->
 </html>

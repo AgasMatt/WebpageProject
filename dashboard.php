@@ -8,9 +8,9 @@
 			font-family: Arial, Helvetica, sans-serif;
 		}
 		
-		.conatiner{
+		.container{
 			margin: auto;
-			bacground-color: #555;
+			background-color: #555;
 			height: auto;
 			color: white;
 			border-radius: 1vh;

@@ -52,14 +52,19 @@
   color: black;
 }
 
-
+.updater {
+	font-family: calibri;
+	text-decoration: none;
+	font-weight: bold;
+	color: #2779de;
+	font-size: 3vh;
+}
 </style>
 <body>
 <div class="topnav">
-  <a href="#home">View teachers table</a>
-  <a href="#news">View</a>
-  <a href="#contact">Profile</a>
- 
+  <?php
+		echo "<a href=\"dashboard.php?account=".$_GET["account"]."\">Home</a><a href=\"teachertable.php?account=".$_GET["account"]."\">View Teachers</a><a href=\"profile.php?account=".$_GET["account"]."\">Profile</a>";
+	?>
 </div>
 	
 <center>
@@ -76,9 +81,9 @@
 	</tr>
 <?php
 include ("connection.php");
-if (isset ($GET ['name'])){
-	$id = $_GET['name'];
-	$delete = mysqli_query($connection, "DELETE FROM leavetable where name = '$name");
+if (isset($_GET['id'])){
+	$id = $_GET['id'];
+	$delete = mysqli_query($connection, "DELETE FROM leavetable where id = ".$id.";");
 }
 $result = mysqli_query($connection, "select * from leavetable");
 
@@ -91,13 +96,13 @@ if (mysqli_num_rows($result) >0){
 		echo "<td>". $rows[4]. "</td>";
 		echo "<td>". $rows[5]. "</td>";
 		echo "<td>". $rows[6]. "</td>";
-		echo "<td> <button class ='btn'><a href='leavetable.php?id=".$rows[0]."'>DELETE</a></button></td>";
+		echo "<td> <button class ='btn'><a href='leavetable.php?account=".$_GET["account"]."&id=".$rows[0]."'>DELETE</a></button></td>";
 		echo "</tr>";
 	}
 }
 ?>
 </table>
 </center>
-<?php echo "<a href=\"addtoleave.php?account=".$_GET["account"]."\">VIEW</a>" ?>
+<?php echo "<center><a class=\"updater\" href=\"addtotrtable.php?account=".$_GET["account"]."\">ADD RECORDS</a></center>"; ?>
 </body>
 </html>

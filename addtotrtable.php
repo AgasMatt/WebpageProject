@@ -1,47 +1,60 @@
-!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 	<head>
 		<title>SPRCNHS - Add Teachers</title>
 	</head>
+	<style>
+		body{
+			background-color: #00A877;
+		}
+		fieldset{
+			width:35vw;
+			height: 35vh;
+			left: 32vw;
+			top: 20vh;
+			position: absolute;
+			border: none;
+	        background-color: WHITE;
+			border-radius: 25px;
+		}
+	</style>
 	<body>
 		<form action="" method="post">
 			<fieldset>
 			<center>
-				<div class="body">
-					<h1>Something</h1>
+				<h1>Add Teachers</h1>
+				
+				<label><input type="text" name="fname" placeholder="FIRST NAME" required></label>
+				
+				<label><input type="text" name="mname" placeholder="MIDDLE NAME" required></label>
+				
+				<label><input type="text" name="lname" placeholder="LAST NAME" required></label>
+				
+				<label><input type="text" name="status" placeholder="STATUS" required></label>
+				
+				<label><input type="text" name="birthplace" placeholder="BIRTH PLACE" required></label>
+				
+				<label><input type="text" name="salary" placeholder="SALARY" required></label>
+				
+				<label><input type="date" name="birthdate" id="birthdate"  placeholder="BIRTH DATE" required></label>
+				
+				<label><input type="text" name="empstat" placeholder="EMP STAT" required></label>
+				
+				<label><input type="number" name="tin" placeholder="TIN" required></label>
+				
+				<label><input type="text" name="sg" placeholder="SG" required></label>
+				
+				<label><input type="text" name="gender" placeholder="GENDER" required></label>
+				
+				<label><input type="text" name="course" placeholder="COURSE" required></label>
+				
+				<label><input type="text" name="postgrad" placeholder="POSTGRAD" required></label>
+				
+				<label><input type="text" name="grdlvl" placeholder="GRADE LEVEL" required></label>
 					
-					<label><input type="text" name="fname" placeholder="FIRST NAME" required></label>
-					
-					<label><input type="text" name="mname" placeholder="MIDDLE NAME" required></label>
-					
-					<label><input type="text" name="lname" placeholder="LAST NAME" required></label>
-					
-					<label><input type="text" name="status" placeholder="STATUS" required></label>
-					
-					<label><input type="text" name="birthplace" placeholder="BIRTH PLACE" required></label>
-					
-					<label><input type="text" name="salary" placeholder="SALARY" required></label>
-					
-					<label><input type="date" name="birthdate" id="birthdate"  placeholder="BIRTH DATE" required></label>
-					
-					<label><input type="text" name="empstat" placeholder="EMP STAT" required></label>
-					
-					<label><input type="number" name="tin" placeholder="TIN" required></label>
-					
-					<label><input type="text" name="sg" placeholder="SG" required></label>
-					
-					<label><input type="text" name="gender" placeholder="GENDER" required></label>
-					
-					<label><input type="text" name="course" placeholder="COURSE" required></label>
-					
-					<label><input type="text" name="postgrad" placeholder="POSTGRAD" required></label>
-					
-					<label><input type="text" name="grdlvl" placeholder="GRADE LEVEL" required></label>
-					
-					<label><input type="number" name="age" placeholder="AGE" required></label>
-					
-					<input type="submit" value="SUBMIT">
-				</div>
+				<label><input type="number" name="age" placeholder="AGE" required></label>
+				
+				<input type="submit" value="SUBMIT">
 			</center>
 			<?php
 				include("connection.php");
