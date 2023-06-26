@@ -27,7 +27,12 @@
   
 	h1{
 		top: 1vh;
-	
+		font-family: calibri;
+		text-decoration: none;
+		font-weight: bold;
+		color: #2779de;
+		font-size: 5vh;
+		text-align: center;
 		background: #00A877;
 	}
 
@@ -61,48 +66,32 @@
 }
 </style>
 <body>
-<div class="topnav">
-  <?php
-		echo "<a href=\"dashboard.php?account=".$_GET["account"]."\">Home</a><a href=\"teachertable.php?account=".$_GET["account"]."\">View Teachers</a><a href=\"profile.php?account=".$_GET["account"]."\">Profile</a>";
+	<?php
+		include("connection.php");
+		if (isset($_GET["account"])) {
+			echo "<div class=\"topnav\"><a href=\"dashboard.php?account=".$_GET["account"]."\">Home</a><a href=\"teachertable.php?account=".$_GET["account"]."\">View Teachers</a><a href=\"profile.php?account=".$_GET["account"]."\">Profile</a></div><center><table><tr><th>NAME</th><th>START DATE</th><th>END DATE</th><th>NO. OF DAYS</th><th>TYPE OF LEAVE</th><th>REMARKS</th><th>EDIT</th></tr>";
+			if (isset($_GET['id'])){
+				$id = $_GET['id'];
+				$delete = mysqli_query($connection, "DELETE FROM leavetable where id = ".$id.";");
+			}
+			$result = mysqli_query($connection, "select * from leavetable");
+			if (mysqli_num_rows($result) >0){
+				while ($rows = mysqli_fetch_array($result)){
+					echo "<tr>";
+					echo "<td>". $rows[1]. "</td>";
+					echo "<td>". $rows[2]. "</td>";
+					echo "<td>". $rows[3]. "</td>";
+					echo "<td>". $rows[4]. "</td>";
+					echo "<td>". $rows[5]. "</td>";
+					echo "<td>". $rows[6]. "</td>";
+					echo "<td> <button class ='btn'><a href='leavetable.php?account=".$_GET["account"]."&id=".$rows[0]."'>DELETE</a></button></td>";
+					echo "</tr>";
+				}
+			}
+			echo "</table><a class=\"updater\" href=\"addtotrtable.php?account=".$_GET["account"]."\">ADD RECORDS</a></center>";
+		} else {
+			echo "<h1>You must be logged in to access this.</h1>";
+		}
 	?>
-</div>
-	
-<center>
-
-<table>
-	<tr>
-		<th>NAME</th>
-		<th>START DATE</th>
-		<th>END DATE</th>
-		<th>NO. OF DAYS</th>
-		<th>TYPE OF LEAVE</th>
-		<th>REMARKS</th>
-		<th>EDIT</th>
-	</tr>
-<?php
-include ("connection.php");
-if (isset($_GET['id'])){
-	$id = $_GET['id'];
-	$delete = mysqli_query($connection, "DELETE FROM leavetable where id = ".$id.";");
-}
-$result = mysqli_query($connection, "select * from leavetable");
-
-if (mysqli_num_rows($result) >0){
-	while ($rows = mysqli_fetch_array($result)){
-		echo "<tr>";
-		echo "<td>". $rows[1]. "</td>";
-		echo "<td>". $rows[2]. "</td>";
-		echo "<td>". $rows[3]. "</td>";
-		echo "<td>". $rows[4]. "</td>";
-		echo "<td>". $rows[5]. "</td>";
-		echo "<td>". $rows[6]. "</td>";
-		echo "<td> <button class ='btn'><a href='leavetable.php?account=".$_GET["account"]."&id=".$rows[0]."'>DELETE</a></button></td>";
-		echo "</tr>";
-	}
-}
-?>
-</table>
-</center>
-<?php echo "<center><a class=\"updater\" href=\"addtotrtable.php?account=".$_GET["account"]."\">ADD RECORDS</a></center>"; ?>
 </body>
 </html>

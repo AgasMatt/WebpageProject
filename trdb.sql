@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 16, 2023 at 02:49 AM
+-- Generation Time: Jun 26, 2023 at 02:35 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -46,7 +46,8 @@ CREATE TABLE IF NOT EXISTS `admintble` (
 INSERT INTO `admintble` (`Name`, `Email`, `Username`, `Password`, `SecurityQ`, `Answer`) VALUES
 ('hrfgbsggs', 'foejfo@fofeef.com', 'WeltjeroBouite', 'grsgsgbdghge', 'What is the color of my rock?', 'lightgray'),
 ('gfsgsrgsr', 'rggws@grgrsgs.frerf', 'LookAtMyEyes', 'LookAtMyEyes', 'Look at me.', 'Done.'),
-('hrhgghsrgrg', 'rtststrsrt@mjhmfh.ftgr', 'rtrstsrtsrt', '<br><br><br>', 'Food', 'Yes');
+('hrhgghsrgrg', 'rtststrsrt@mjhmfh.ftgr', 'rtrstsrtsrt', '<br><br><br>', 'Food', 'Yes'),
+('What Is This', 'lamborghini@lambor.ghini', 'HahaVeryFunny', 'polis', 'What is this?', 'Yes.');
 
 -- --------------------------------------------------------
 
@@ -71,12 +72,8 @@ CREATE TABLE IF NOT EXISTS `leavetable` (
 --
 
 INSERT INTO `leavetable` (`ID`, `Name`, `StartDate`, `EndDate`, `Numdays`, `Leavetype`, `Remarks`) VALUES
-(8, 'GontiÃ±as, Liezel B.', '2021-06-06', '2021-07-05', 30, 'Sick Leave', 'with RTS'),
 (7, 'Mojeco, Gemmalyn V.', '2021-05-22', '2021-07-21', 60, 'Maternity Leave', 'with RTS'),
-(9, 'Padilla, Jonathan B.', '2021-09-13', '2021-10-05', 0, 'Sick Leave', 'Internal Arrangement'),
-(10, 'Nacionales, Sheila Mae B.', '2022-01-03', '2022-04-17', 105, 'Maternity Leave', 'Filed RTS'),
-(11, 'Ponce, Emelia A.', '2022-02-10', '2022-05-26', 105, 'Maternity Leave', 'Filed RTS'),
-(12, 'grstgvb', '2023-06-07', '2023-06-21', 34, 'Vacation Leave', 'gertv');
+(11, 'Ponce, Emelia A.', '2022-02-10', '2022-05-26', 105, 'Maternity Leave', 'Filed RTS');
 
 -- --------------------------------------------------------
 
@@ -103,14 +100,6 @@ CREATE TABLE IF NOT EXISTS `trtable` (
   `Age` int(100) DEFAULT NULL,
   PRIMARY KEY (`TIN`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `trtable`
---
-
-INSERT INTO `trtable` (`FirstName`, `MiddleName`, `LastName`, `Status`, `BirthPlace`, `salary`, `Birthdate`, `Empstat`, `TIN`, `SG`, `Gender`, `Course`, `PostGrad`, `GradeLvl`, `Age`) VALUES
-('ewrtfgqwekyfiwgf', 'srgewrgesgrsz', 'gwrgwrgrw', 'srgwrgwrgwsg', 'gwgwsgfswf', 5325223, '2023-05-01', 'sgsrgfvsgvsdg', 35235235, 'gdbhdbebh', 'f', 'grsgesrgghehg', 'r4grwgsgergr', 'rgrewgwrgsrg', 36),
-('aika', 'longaria', 'aniceto', 'married', 'bfigeifhnc', 12341234, '2023-05-02', 'fvac', 4, '23dewq', 'xdxw', 'dfg df', 'qcxeq', '4', 7);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
